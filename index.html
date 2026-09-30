@@ -3,13 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cuartia · Alquila tu piso grande en Zaragoza con renta fija</title>
+<title>Alquila tu piso grande en Zaragoza con renta fija | Cuartia</title>
 <meta name="description" content="Alquilamos tu piso de 5 habitaciones o más en Zaragoza y te pagamos una renta fija cada mes, aunque esté vacío. Nos encargamos de todo.">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="canonical" href="https://cuartia.es/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0B1F36">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Cuartia">
+<meta property="og:title" content="Alquila tu piso grande en Zaragoza con renta fija | Cuartia">
+<meta property="og:description" content="Pisos de 4, 5 o más habitaciones en Zaragoza: renta fija cada mes por contrato y nos encargamos de todo. Propuesta sin compromiso en 24 horas.">
+<meta property="og:url" content="https://cuartia.es/">
+<meta property="og:image" content="https://cuartia.es/img/og-cuartia.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="image" href="img/hero-pilar-1200.webp" imagesrcset="img/hero-pilar-768.webp 768w, img/hero-pilar-1200.webp 1200w, img/hero-pilar-1920.webp 1920w" imagesizes="100vw" fetchpriority="high">
 <link rel="stylesheet" href="fonts/fonts.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","RealEstateAgent"],"@id":"https://cuartia.es/#organizacion","name":"Cuartia","legalName":"Cherokee Huesca, S.L.","taxID":"B19890540","url":"https://cuartia.es/","logo":"https://cuartia.es/img/favicon-512.png","image":"https://cuartia.es/img/og-cuartia.jpg","email":"cuartia.es@gmail.com","description":"Empresa de Zaragoza especializada en pisos grandes (4, 5 o más habitaciones): alquiler con renta fija y gestión integral para propietarios.","address":{"@type":"PostalAddress","streetAddress":"Calle de Antonio Maura, 29, 4.º izquierda","postalCode":"50018","addressLocality":"Zaragoza","addressRegion":"Aragón","addressCountry":"ES"},"areaServed":{"@type":"City","name":"Zaragoza","sameAs":"https://es.wikipedia.org/wiki/Zaragoza"},"sameAs":["https://www.instagram.com/cuartia.es/","https://www.facebook.com/profile.php?id=61594954588556"]},{"@type":"WebSite","@id":"https://cuartia.es/#web","url":"https://cuartia.es/","name":"Cuartia","inLanguage":"es-ES","publisher":{"@id":"https://cuartia.es/#organizacion"}},{"@type":"Service","name":"Alquiler con renta fija y gestión integral de pisos grandes","serviceType":"Gestión de alquiler","provider":{"@id":"https://cuartia.es/#organizacion"},"areaServed":{"@type":"City","name":"Zaragoza"},"audience":{"@type":"Audience","audienceType":"Propietarios de pisos de 4, 5 o más habitaciones"}}]}</script>
 <style>
   :root {
     --navy: #0B1F36;
@@ -39,11 +54,15 @@
   header.top { position: absolute; inset: 0 0 auto 0; z-index: 2; }
   header.top .wrap { display: flex; justify-content: space-between; align-items: center; padding-block: 22px; }
   header.top img { height: 44px; width: auto; }
+  header.top nav.menu { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; justify-content: flex-end; }
+  header.top nav.menu a:not(.mini) { color: #E2E7EE; text-decoration: none; font: 500 15px Inter, sans-serif; }
+  header.top nav.menu a:not(.mini):hover { color: var(--gold); }
+  @media (max-width: 700px) { header.top nav.menu a:not(.mini) { display: none; } }
   header.top a.mini { color: var(--white); font: 600 15px Poppins, sans-serif; text-decoration: none; border: 1px solid rgba(255,255,255,.35); padding: 10px 18px; border-radius: 999px; }
 
   /* Hero */
   .hero { position: relative; background: var(--navy); color: var(--white); overflow: hidden; }
-  .hero::before { content: ""; position: absolute; inset: 0; background: url(img/salon2.jpg) center/cover; opacity: .28; }
+  .hero .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .32; }
   .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,31,54,.55) 0%, var(--navy) 92%); }
   .hero .wrap { position: relative; z-index: 1; padding-block: 140px 80px; display: grid; gap: 22px; max-width: 880px; margin-left: max(20px, calc((100% - 1120px)/2)); }
   .badge { display: inline-block; background: var(--gold); color: var(--navy); font: 700 13px Poppins, sans-serif; letter-spacing: .06em; padding: 9px 16px; border-radius: 10px; justify-self: start; }
@@ -109,12 +128,13 @@
 
 <header class="top">
   <div class="wrap">
-    <img src="img/logo_blanco.png" alt="Cuartia · Gestión inmobiliaria">
-    <a class="mini" href="#propuesta">Pedir propuesta</a>
+    <a href="/"><img src="img/logo_blanco.png" alt="Cuartia, gestión inmobiliaria en Zaragoza" width="194" height="44"></a>
+    <nav class="menu" aria-label="Menú principal"><a href="/guias/">Guías</a><a href="/precios-alquiler-zaragoza/">Precios por barrio</a><a href="/calculadora-alquiler-zaragoza/">Calculadora</a><a href="/quienes-somos/">Quiénes somos</a><a class="mini" href="#propuesta">Pedir propuesta</a></nav>
   </div>
 </header>
 
 <section class="hero" style="padding:0">
+  <img class="bg" src="img/hero-pilar-1200.webp" srcset="img/hero-pilar-768.webp 768w, img/hero-pilar-1200.webp 1200w, img/hero-pilar-1920.webp 1920w" sizes="100vw" alt="" width="1920" height="960" fetchpriority="high">
   <div class="wrap">
     <span class="badge">PISOS DE 5 O MÁS HABITACIONES · ZARAGOZA</span>
     <h1>Tu piso grande, alquilado y <em>cobrando cada mes.</em></h1>
@@ -204,7 +224,7 @@
       <p class="legal" id="err" style="color:#9A2E2E;display:none"></p>
     </form>
     <div class="aside">
-      <img src="img/t2_relax_mayores.jpg" alt="Propietarios tranquilos en casa" loading="lazy">
+      <img src="img/t2_relax_mayores-800.webp" alt="Pareja de propietarios tranquilos en su casa" loading="lazy" width="800" height="450">
       <h3 style="margin-top:22px;font-size:22px">Lo que te llevas</h3>
       <ul>
         <li>Renta fija cada mes, aunque el piso esté vacío</li>
@@ -212,6 +232,18 @@
         <li>Averías pequeñas: las arreglamos nosotros</li>
         <li>Visita y propuesta sin compromiso</li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<section style="padding-bottom:0">
+  <div class="wrap">
+    <p class="eyebrow">Recursos para propietarios</p>
+    <h2>Todo lo que necesitas saber para alquilar en Zaragoza</h2>
+    <div class="grid3">
+      <a class="card" style="text-decoration:none" href="/calculadora-alquiler-zaragoza/"><h3>¿Por cuánto alquilo mi piso?</h3><p>Calculadora con los precios de cada distrito de Zaragoza en 2026.</p></a>
+      <a class="card" style="text-decoration:none" href="/precios-alquiler-zaragoza/"><h3>Precios por barrio</h3><p>€/m² del alquiler en cada distrito y precio medio de la habitación.</p></a>
+      <a class="card" style="text-decoration:none" href="/guias/nueva-ley-alquiler-habitaciones-rdl-26-2026/"><h3>Nueva ley de habitaciones</h3><p>Qué cambia desde el 1 de octubre de 2026 con el RDL 26/2026.</p></a>
     </div>
   </div>
 </section>
@@ -232,7 +264,7 @@
   <div class="wrap">
     <img src="img/logo_blanco.png" alt="Cuartia">
     <div>Cuartia · Zaragoza · <a href="mailto:cuartia.es@gmail.com">cuartia.es@gmail.com</a></div>
-    <div><a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Política de privacidad</a> · <a href="https://www.instagram.com/cuartia.es/" target="_blank" rel="noopener">Instagram</a></div>
+    <div><a href="/guias/">Guías</a> · <a href="/quienes-somos/">Quiénes somos</a> · <a href="/contacto/">Contacto</a> · <a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Política de privacidad</a> · <a href="https://www.instagram.com/cuartia.es/" target="_blank" rel="noopener">Instagram</a></div>
     <div style="opacity:.7;font-size:13px">Cuartia es una marca solicitada por Cherokee Huesca, S.L. (NIF B19890540). Esta web no usa cookies.</div>
   </div>
 </footer>
