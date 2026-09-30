@@ -201,7 +201,7 @@
       </div>
       <label class="legal" style="display:block"><input type="checkbox" id="acepto" required>He leído y acepto la <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a>.</label>
       <button class="btn" type="submit" style="justify-self:start">Enviar y que me llamen →</button>
-      <p class="ok" id="ok">Se ha abierto tu correo con los datos rellenos: pulsa «Enviar» y te llamamos en menos de 24 horas. Si no se abre, escríbenos a <b>rentaliazaragoza@gmail.com</b>.</p>
+      <p class="ok" id="ok">Se ha abierto tu correo con los datos rellenos: pulsa «Enviar» y te llamamos en menos de 24 horas. Si no se abre, escríbenos a <b>cuartia.es@gmail.com</b>.</p>
       <p class="legal" id="err" style="color:#9A2E2E;display:none"></p>
     </form>
     <div class="aside">
@@ -232,7 +232,7 @@
 <footer>
   <div class="wrap">
     <img src="img/logo_blanco.png" alt="Cuartia">
-    <div>Cuartia · Zaragoza · <a href="mailto:rentaliazaragoza@gmail.com">rentaliazaragoza@gmail.com</a></div>
+    <div>Cuartia · Zaragoza · <a href="mailto:cuartia.es@gmail.com">cuartia.es@gmail.com</a></div>
     <div><a href="privacidad.html">Política de privacidad</a> · <a href="https://www.instagram.com/cuartia.es/" target="_blank" rel="noopener">Instagram</a></div>
   </div>
 </footer>
@@ -250,7 +250,7 @@
     err.style.display = 'none';
     enviando = true;
     const cuerpo = `Nombre: ${v('nombre')}\nTeléfono: ${v('tel')}\nBarrio: ${v('barrio')}\nHabitaciones: ${v('hab')}\nBaños: ${v('banos')}\nCalle: ${v('calle') || '-'}`;
-    location.href = 'mailto:rentaliazaragoza@gmail.com?subject=' + encodeURIComponent('Propuesta Cuartia - ' + v('barrio')) + '&body=' + encodeURIComponent(cuerpo);
+    location.href = 'mailto:cuartia.es@gmail.com?subject=' + encodeURIComponent('Propuesta Cuartia - ' + v('barrio')) + '&body=' + encodeURIComponent(cuerpo);
     document.getElementById('ok').style.display = 'block';
     setTimeout(() => { enviando = false; }, 3000);
   });
